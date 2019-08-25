@@ -16,7 +16,7 @@ De forma similar, en el archivo "paperless/sms/send_sms.py" se deben proporciona
 
 Para la mensajería de Telegram, primero se debe configurar un bot enviando /newbot a @BotFather, después se debe editar el archivo "paperless/tele/tele.py" y poner el token del bot que se acaba de crear en el campo "token" del bot declarado en el archivo.
 
-El archivo "paperless/messenger/send_message.py" también debe contener las credenciales necesrias.
+El archivo "paperless/messenger/send_message.py" también debe contener las credenciales correspondientes para el chat en messenger.
 
 ## Iniciar Servicios
 

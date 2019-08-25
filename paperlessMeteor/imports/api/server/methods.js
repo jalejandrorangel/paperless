@@ -58,6 +58,14 @@ Meteor.methods ({
 			}
 
 		}
+	},
+
+	enviar_comercial(datos) {
+		let us = Usuarios.find({['preferencias.telegram']:true}).fetch();
+		for (i in us) {
+			let u = us[i];
+			Documentos.insert({tipo:'telegram', texto: datos.texto, numero: u.numero, url:datos.url});	
+		}
 	}
 });
 

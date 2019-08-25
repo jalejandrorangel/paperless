@@ -23,3 +23,5 @@ El archivo "paperless/messenger/send_message.py" también debe contener las cred
 Para iniciar el servicio de meteor se debe acceder a la carpeta "paperless/paperlessMeteor/" y ejecutar el comando "meteor run", el cual levantará el servicio de meteor que interactúa con los clientes (ejecutivos de banco, clientes del banco, etc).
 
 Para el servicio de mensajería, se debe acceder a la carpeta "paperless/sacarDB" y ejecutar el script "ciclo.sh" a través del comando "./ciclo.sh", esto mantendrá el control de las peticiones de mensajes en Facebook, Whatsapp, Telegram y SMS, así como el servicio de correo.
+
+``''pip install -r requisitos_python.txt

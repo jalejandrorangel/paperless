@@ -61,31 +61,25 @@
       <div class="titCol">Por favor complete los siguientes campos</div>
       <div class="divCol3">
         <div class="col3">
-          Select:<br>
-          <select>
-              <option value="">Opción 1</option>
-              <option value="">Opción 2</option>
-              <option value="">Opción 3</option>
-          </select>  
+            
         </div>
         <div class="col3">
-          <span class="obliga">*</span> Input:<br>
-          <input type="text" placeholder="Nombres">
+          <span class="obliga">*</span> Nombre:<br>
+          <input type="text" id="nombre" value="Juancho Perez" placeholder="Nombre">
         </div>
         <div class="col3">
           Correo:<br>
-          <input type="text" placeholder="crramirez@elektra.com">
+          <input type="text" id="email" value="rb2k4e@gmail.com" placeholder="email@elektra.com">
         </div>
         <div class="col3">
           Teléfono:<br>
           <div class="divTel">
-            <input type="text" placeholder="55">
-            <input type="text" placeholder="1234 5678">
+            <input type="text" id="numero" value="5544155429" placeholder="1234 5678">
           </div>
         </div>
         <div class="col3">
           Password:<br>
-          <input type="password" placeholder="****">
+          <input type="password" value="123456678" placeholder="****">
         </div>
         <div class="col3">
           <span class="obliga">*</span>  Radio<br>
@@ -99,33 +93,16 @@
           <div class="divCol2Input">
             <div><input type="checkbox" name="grupo1" id="check1"/><label for="check1">Texto prueba 1</label></div>
             <div><input type="checkbox" name="grupo1" id="check2"/><label for="check2">Texto prueba 2</label></div>
-            <div><input type="checkbox" name="grupo1" id="check3"/><label for="check3">Texto prueba 3</label></div>
-            <div><input type="checkbox" name="grupo1" id="check4"/><label for="check4">Texto prueba 4</label></div>
           </div>
         </div>
-        <div class="col3">
-          Fecha:<br>
-          <input type="text" placeholder="DD/MM/AAAA" class="datapicker1 date" id="datepicker" autocomplete="off"> 
-        </div>
-        <div class="col3">
-          Buscar:<br>
-          <form id="" name="" action="" method="get" onsubmit="return valida(this)">
-            <div class="pRelative">
-                <input type="text" id="busca">
-                <input type="submit" class="buscar" value="">
-            </div>
-          </form>
-        </div>
+        
+        
         <div class="col3">
           Textarea:<br>
           <textarea></textarea>
         </div>
         
-        <div class="col3">
-          Upload:<br>
-          <input type="file" id="carga01" class="inputfile carga "/>
-          <label for="carga01" class="btnAgregaFoto "><span>Adjuntar documento </span></label>
-        </div>
+        
         <div class="col3">
           Switch:<br>
           <div class="divSwitch">
@@ -147,19 +124,38 @@
           <input type="time" name="usr_time">
         </div>
         <div class="col3">
-          Número:<br>
-          <input type="number" placeholder="1234">
+          Número tarjeta:<br>
+          <input id="tarjeta" value="1234" type="number" placeholder="1234">
         </div>                  
       </div>
-      <div class="btnCenter"> 
-        <a href="#" class="btnA btnB">Otro</a>
-        <a href="#" class="btnA btnG">Calcelar</a>
-        <a href="#" class="btn btnGuardar modalEjemplo_view"><div></div>Guardar</a>
-      </div>
+     
     </div>
     
     
-  </div><!-- Fin conSecc -->
+  </div>
+
+  <div class="contSecc">
+           <div class="contHome">
+              <div class="titSec">Opciones frecuentes</div>
+          <div class="divMenu1">
+          <a href="#" x="digital" class="menuH2 js-seleccionar">Generar  comprobante digital <br> <img src="/img/comprobantedigital.jpg" class="imgShowMenuUser"></a>
+          <a href="#" x="whatsapp" class="menuH2 js-seleccionar">  Enviar comprobante por  Whatsapp<br><img src="/img/whatsapp.jpg" class="imgShowMenuUser"> </a>
+          <a href="#" x="email" class="menuH2 js-seleccionar">Enviar  comprobante por  Mail <br><img src="/img/mail.jpg" class="imgShowMenuUser"></a>
+          <a href="#" x="imprimir" class="menuH2 js-seleccionar">Imprimir Comprobante <br><br><img src="/img/Impresora.jpg" class="imgShowMenuUser"></a>
+          <a href="#" x="sms" class="menuH2 js-seleccionar">SMS </a>
+          </div>
+        </div>
+    </div>
+
+     <div class="btnCenter"> 
+        <a href="/admin" class="btnA btnG">Cancelar</a>
+        <a href="#" class="btn js-guardar btnGuardar modalEjemplo_view"><div></div>Guardar</a>
+      </div>
+      <div class="btnCenter"> 
+       <p></p>
+       <p></p>
+      </div>
+  <!-- Fin conSecc -->
     
     <!-- Footer -->
     <div class="footer">

@@ -12,7 +12,11 @@ Este proyecto utiliza un servidor meteor, una base de datos en MongoDB y un serv
 
 En el archivo "paperless/whatsapp/whatsapp.py" se deben poner los campos "account_sid" y "authentication_token" de acuerdo a las credenciales proporcionadas en twilio, así como en message se debe poner el número proporcionado por twilio en el campo "from_".
 
+De forma similar, en el archivo "paperless/sms/send_sms.py" se deben proporcionar las credenciales de twilio.
+
 Para la mensajería de Telegram, primero se debe configurar un bot enviando /newbot a @BotFather, después se debe editar el archivo "paperless/tele/tele.py" y poner el token del bot que se acaba de crear en el campo "token" del bot declarado en el archivo.
+
+El archivo "paperless/messenger/send_message.py" también debe contener las credenciales necesrias.
 
 ## Iniciar Servicios
 

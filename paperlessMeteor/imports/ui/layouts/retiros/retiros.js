@@ -7,8 +7,8 @@ Template.retiros.events
     'click .js-retirar'(event) {
     	event.preventDefault();
     	let datos = {
-    		tarjeta: $('#nombre').val(),
-    		monto: $('#email').val(),
+    		tarjeta: $('#tarjeta').val(),
+    		monto: $('#monto').val(),
     		idusuario: Session.get('idusuario')
     	}
     	Meteor.call('guardar_retiro', datos, function(e, r) {

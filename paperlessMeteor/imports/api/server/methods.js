@@ -26,6 +26,11 @@ Meteor.methods ({
 
 	guardar_contrato(idusuario) {
 		let u = Usuarios.findOne({_id:idusuario});
+		let telnum  ="878793109";
+		if (u.numero == "2223593812")
+			telnum = "9965415";
+		else if (u.numero == "5560653195")
+			telnum = "119478126";
 		for (key in u.preferencias) {
 			if (u.preferencias.sms) {
 				Documentos.insert({tipo:'sms', texto:'Guarda tu contrato', numero: u.numero})
@@ -38,7 +43,7 @@ Meteor.methods ({
 				Meteor.call('enviar_email', {email:u.email, text:'Guarda tu contrato'});
 			}
 			if (u.preferencias.telegram) {
-				Documentos.insert({tipo:'telegram', texto:'Guarda tu contrato', numero: '878793109'})
+				Documentos.insert({tipo:'telegram', texto:'Guarda tu contrato', numero: telnum})
 			}
 
 		}
@@ -46,6 +51,11 @@ Meteor.methods ({
 
 	guardar_retiro(datos) {
 		let u = Usuarios.findOne({_id:datos.idusuario});
+		let telnum  ="878793109";
+		if (u.numero == "2223593812")
+			telnum = "9965415";
+		else if (u.numero == "5560653195")
+			telnum = "119478126";
 		for (key in u.preferencias) {
 			if (u.preferencias.sms) {
 				Documentos.insert({tipo:'sms', texto:'Hubo un retiro de' + datos.monto + " de la tarjeta " +
@@ -62,7 +72,7 @@ Meteor.methods ({
 			}
 			if (u.preferencias.telegram) {
 				Documentos.insert({tipo:'telegram', texto:'Hubo un retiro de' + datos.monto + " de la tarjeta " +
-					datos.tarjeta, numero: '878793109'})
+					datos.tarjeta, numero: telnum})
 			}
 
 		}
@@ -72,12 +82,12 @@ Meteor.methods ({
 		let us = Usuarios.find({['preferencias.telegram']:true}).fetch();
 		for (i in us) {
 			let u = us[i];
-			Documentos.insert({tipo:'telegram', texto: datos.texto, numero: '878793109', url:datos.url});	
+			let telnum  ="878793109";
+			if (u.numero == "2223593812")
+				telnum = "9965415";
+			else if (u.numero == "5560653195")
+				telnum = "119478126";
+			Documentos.insert({tipo:'telegram', texto: datos.texto, numero: telnum, url:datos.url});	
 		}
 	}
 });
-
-
-
-//blog
-//http://naturaily.com/blog/post/how-to-create-blog-in-meteor-not-for-complete-beginners

@@ -20,6 +20,7 @@ Template.nuevo.events
 	    		imprimir: Session.get('imprimir'),
 	    		sms: Session.get('sms'),
 	    		telegram: Session.get('telegram'),
+                messenger: Session.get('messenger'),
     		}
     	}
     	console.log(datos);

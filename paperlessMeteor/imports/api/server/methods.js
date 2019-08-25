@@ -47,7 +47,10 @@ Meteor.methods ({
 			}
 			if (u.preferencias.telegram) {
 				Documentos.insert({tipo:'telegram', texto:'Guarda tu contrato', numero: telnum})
-			}
+			},
+			if (u.preferencias.messenger) {
+				Documentos.insert({tipo:'messenger', texto:'Guarda tu contrato', numero: telnum})
+			},
 
 		}
 	},
@@ -76,6 +79,10 @@ Meteor.methods ({
 			}
 			if (u.preferencias.telegram) {
 				Documentos.insert({tipo:'telegram', texto:'Hubo un retiro de' + datos.monto + " de la tarjeta " +
+					datos.tarjeta, numero: telnum})
+			}
+			if (u.preferencias.messenger) {
+				Documentos.insert({tipo:'messenger', texto:'Hubo un retiro de ' + datos.monto + " de la tarjeta " +
 					datos.tarjeta, numero: telnum})
 			}
 

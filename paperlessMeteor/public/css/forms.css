@@ -1,0 +1,156 @@
+input[type="text"], input[type="date"], input[type="number"], input[type="password"], select, .dk-selected,input[type="time"] {
+   background-color: #fff;
+    color: #a1a1a1;
+    border: 0px;
+    padding: 0px;
+    border-radius: 0px;
+    position: relative;
+    font-size: 11px;
+    padding: 0px 10px;
+    height: 29px;
+    width: 100%;
+    border-bottom: 1px solid #a1a1a1;
+}
+
+select, .dk-selected{ -webkit-appearance:none;-moz-appearance:none; padding-right: 30px !important;}
+.w87{width: 87%; margin: auto;position: relative;}
+input.buscar {background-image: url(../img/lupa.svg);background-size: 16px;background-repeat: no-repeat;background-color: transparent;width: 17px;height: 17px;border: 0px;cursor: pointer;position: absolute;    right: 2%;bottom: 6px;
+}
+input.editar {background-image: url(../img/icoEditar.svg);background-size: 16px;background-repeat: no-repeat;background-color: transparent;width: 17px;height: 17px;border: 0px;cursor: pointer;position: absolute;    right: 2%;bottom: 6px;
+}
+.divTel{ display: flex;}
+
+.divTel > input:nth-child(1){width: 30%;margin-right: 2%;}
+.divTel > input:nth-child(2){}
+/* ****************** Select ***************************** */
+.dk-selected {background-image: url(../img/select.svg);background-position: 96% 50%;background-repeat: no-repeat;background-size: 15px;}
+.dk-select *{padding: 0px 10px;}
+.dk-select {position: relative;width: 100%;cursor: pointer;text-align: left;line-height: 20px;}
+.dk-select .dk-select-options {position: absolute;display: none; }
+/*submenu*/
+.dk-select-options {border: 1px solid #AAB7CE;border-bottom-left-radius: 5px;border-bottom-right-radius: 5px;list-style: none;min-width: 100%;overflow-x: hidden;overflow-y: auto;padding: 0px;z-index: 100;    margin: 1px;font-size: 11px;}
+/*Submenu seleccionado*/
+.dk-option-selected {background-color: #006341;color: #ffffff; }
+/*Submenu over*/
+.dk-select-options .dk-option-highlight {background-color: #006341;;color: #ffffff; }
+.dk-select-open-up .dk-selected:after, .dk-select-open-down .dk-selected:after {border-left-color: #6F7E95; }
+.dk-select-open-up .dk-select-options, .dk-select-open-down .dk-select-options { background-color: #ffffff;display: block;border-color: #ededed;box-shadow: 0px 1px 6px 1px rgba(154, 150, 150, 0.5);}
+select, select[data-dkcacheid] {display: none; }
+
+/* ****************** Check box ***************************** */
+input[type=checkbox]{display: none;}
+input[type=checkbox] + label {padding-left: 22px;background-repeat: no-repeat;background-size: 15px;cursor: pointer;display: inline-block;background-image:url(../img/checkbox.svg);    background-position: 0px 7px; padding: 6px 30px 5px 22px; }
+input[type=checkbox]:checked + label{background-image:url(../img/checkbox1.svg); }
+
+input[type=checkbox].alone + label {background-position: 0px 2px;padding: 0px 13px 0px 0px;}
+/* ****************** Radio ***************************** */
+input[type=radio]{display: none;}
+input[type=radio] + label {padding-left: 22px;background-repeat: no-repeat;background-size: 15px;cursor: pointer; display: inline-block;background-image: url(../img/radio.svg);background-position: 0px 7px;    padding: 6px 0px 5px 22px;}
+input[type=radio]:checked + label {background-image:url(../img/radio1.svg);}
+
+input[type=radio].alone + label {background-position: 0px 2px;padding: 0px 13px 0px 0px;}
+
+input[type=checkbox].checkHuella + label {
+    padding-left: 22px;
+    background-repeat: no-repeat;
+    background-size: 23px;
+    cursor: pointer;
+    display: inline-block;
+    background-image: url(../img/icoHuella.svg);
+    background-position: 0px 7px;
+    padding: 0px 15px 26px 15px;
+}	
+input[type=checkbox].checkHuella:checked + label {background-image:url(../img/icoHuella1.svg);}
+
+input[type=checkbox].checkHuella + label {background-position: 0px 2px;}
+/* ****************** textArea ***************************** */
+textarea {resize: none;border: 1px solid #bfbfbf;background-color: #ffffff;padding: 7px 10px;height: 79px;width: 100%;box-sizing: border-box;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;}
+/* ****************** Unpload ***************************** */
+input.carga  { width: 0.1px;height: 0.1px;opacity: 0;overflow: hidden;position: absolute;z-index: -1;}
+.inputfile + label {cursor: pointer; display: block;overflow: hidden;padding: 0px 1.25rem;}
+.carga + label {
+    cursor: pointer;
+    background-image: url(../img/icoAdjuntar.svg);background-size: 17px;background-position: 97% 35%;background-repeat: no-repeat;
+    box-sizing: border-box;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;
+    background-color: #fff;
+    color: #2e2925;
+    border-radius: 0px;border: 1px solid #bfbfbf;
+    position: relative;
+    font-size: 11px;
+    padding: 0px 10px;
+    height: 29px;width: 100%;   
+}
+.carga + label span {width:100%; line-height: 29px;}
+/* ****************** Acordeon ***************************** */
+.divacordion { margin-bottom: 15px;}
+dl {width: 100%;margin: auto;}
+dt {padding: 8px 10px 5px 20px; color: #333333;cursor: pointer;border: 1px solid #bfbfbf;font-family: 'AvenirNextLTPro-Medium';font-size: 15px;}
+dt.accordion-active {background-color: #006341;color: #ffffff;;}
+dd {width: 100%;margin: 0px auto;padding: 20px 2%;background-color: #faf9f9;-moz-box-shadow: 0 0px 1px rgb(226, 222, 222);-webkit-box-shadow: 0 0px 1px rgb(226, 222, 222);box-shadow: 0 0px 1px rgb(226, 222, 222);}
+.accordion dt:before {content: " ";background-image: url(../img/flecha.svg);background-repeat: no-repeat;background-position: left 2px;background-size: 13px;color: #67809f;text-align: center;float: right;width: 22px;height: 17px;transition: all 0.4s ease-out;-moz-transition: all 0.4s ease-out;-webkit-transition: all 0.4s ease-out;
+}
+.accordion dt.accordion-active:before {
+    content: " ";
+    background-image: url(../img/flecha.svg);background-repeat: no-repeat;background-position: 5px 4px;background-size: 13px;
+    color: #67809f;text-align: center;float: right;width: 21px;height: 17px;filter: brightness(1000%)  grayscale(200%);
+    transform: rotate(180deg);-webkit-transform: rotate(180deg);-moz-transform: rotate(180deg);-o-transform: rotate(180deg);
+}
+/* ****************** Select Multiple ***************************** */
+.selectMultiple dd,
+.selectMultiple dt {margin: 0px;padding: 0px;}
+.selectMultiple ul {margin: -1px 0 0 0;}
+.selectMultiple dd {position: relative;}
+.selectMultiple dt  {
+    display: block;
+    padding: 3px 20px 3px 10px;
+    overflow: hidden;
+    border: 1px solid #dfddd2;
+    background-image: url(../img/select1.png);background-repeat: no-repeat;background-position: 101% -2px;background-size: 24px;
+    color: #000;
+}
+.selectMultiple dt  span,
+.multiSel span {
+  cursor: pointer;
+  display: inline-block;
+  padding: 0 3px 2px 0;
+}
+.selectMultiple dd ul {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    display: none;
+    left: 0px;
+    padding: 2px 0px 2px 0%;
+    position: absolute;
+    width: 99%;
+    list-style: none;
+    height: 130px;
+    overflow: auto;
+}
+.selectMultiple span.value {display: none;}
+.multiSel ul li:hover {background-color: #006341;}
+p.multiSel {white-space: nowrap;    overflow: hidden;}
+.selMul {float: left;margin: 5px 10px 0px 0px;}
+.mutliSelect  ul li {
+    list-style: none;
+    margin: 5px;
+    padding: 0;
+}/* ****************** Swich***************************** */
+.divSwitch {height: 30px;display: flex;align-items: center;}
+.switch {width: 46px;height: 23px;display: inline-block;background-color: #b1b2ab;z-index: 0;margin: 0;padding: 0;appearance: none;cursor: pointer;position: relative;border: 0px solid #e7e6e5;margin-right: 15px; border-radius: 15px;}
+
+.switchOn {width: 46px;height: 23px;display: inline-block;background-color: #006341;z-index: 0;margin: 0;padding: 0;appearance: none;cursor: pointer;position: relative;border: 0px solid #e7e6e5;margin-right: 15px; border-radius: 15px;}
+
+.switch:before {content: '';position: absolute;left: 1px;top: 1px;width: 49px;height: 20px;z-index: 1;}
+.switch:after {
+    content: '';
+    height: 22.5px;
+    width: 23px;
+    background: #faf9f7;
+    position: absolute;
+    z-index: 2;
+    -webkit-transition-duration: 100ms;
+    transition-duration: 100ms;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+}
+.switchOn:after{left:23px !important;    }	

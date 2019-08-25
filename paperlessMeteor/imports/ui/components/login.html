@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=edge" />
+	<title>Home</title>
+	<link rel="stylesheet" type="text/css" href="css/login.css">
+    <link rel="stylesheet" type="text/css" href="css/dropkick.css">
+</head>
+
+<body>
+	<div class="ContLogin">
+		<div class="imagen"></div>
+		<div class="login">
+			<div class="titHome"><span class="titV">Bienvenido</span><br>
+				<strong>Portal de Servicios<br>Banco Azteca</strong> 
+			</div>
+			<form id="miFormLogin" name="miFormLogin" action="" method="get" onsubmit="return validaLogin(this)">
+				<div class="divLogin">
+					<div class="subtit">Ingresa tu usuario y contraseña</div>
+					<div><input type="text" placeholder="Usuario:" class="inputlogin" id="txtUsuario" autocomplete="off"></div>
+					<div><input type="text" placeholder="Conseña:" class="inputlogin" id="txtLlave" autocomplete="off"></div>
+					<div class="txtRojo">&nbsp;</div>
+					
+					<div><input type="submit" class="btnLogin" value="Ingresar" ></div>
+					<div><a href="" class="ligaLogin">¿Olvidaste tu contraseña?</a></div>
+					<div class=""><img src="img/logo.svg" class="imgLogoLogin"></div>
+				</div>
+				
+			</form>
+		</div>
+	</div>
+</body>
+</html>	
+<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="js/funciones.js"></script>

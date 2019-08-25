@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=edge" />
+  <title>Portal de Servicios Afores Azteca</title>
+  <link rel="stylesheet" type="text/css" href="css/estilos.css">
+</head>
+
+<body ng-app="app" ng-controller="validarForm">
+
+  <div class="pageHome">
+    <div class="header">
+      <div class="headerMenu">
+        <a href="#" id="hamburger"><img src="img/btn_hamburguer.svg" alt="Menú principal" class="imgHamburgesa"></a>
+      </div>
+      <div class="headerLogo">
+        <a href="index.html"><img src="img/logo.svg" id="imgLogo"></a>
+      </div>
+      <div class="headerUser">
+        <div class="name"><strong>Participante</strong> GS HackChallenge <br> Administrador</div>
+        <div class="pic" style="background-image: url('img/user.jpg');"></div>
+        <div class="noti">7</div>
+        <div class="user-menu">
+          <a href="#"><img src="img/btn_desp_menu.svg" class="imgShowMenuUser"></a>
+        </div>
+        <div class="fecha">
+			<b>24/Ago/2019</b><br>
+		</div>
+      </div>
+
+    </div>
+    <div class="MenuUser">
+      <div class="MenuUser1">
+        <a href="login.html" class="selMenu">
+          <div>Salir</div>
+          <div><img src="img/ico5.svg" class="imgConfig"></div>
+        </a>
+      </div>
+    </div>
+    <div class="clear"></div>
+
+    <div class="titulo">
+    	<div class="ruta">
+			<a href="index.html">Página Principal</a> /
+			<a href="index.html">Portal de servicios</a>/
+			<a href="index.html">Estatus de un trámite</a>
+		</div>
+    	Estatus de un trámite
+    </div>
+
+	<!-- Menu -->
+    <div id="effect" class="ui-widget-content ui-corner-all">
+      <div id="menuPrincipal">
+        <div class="header-usuario">
+          <div id="foto"><img src="img/logo.svg" class="imgLogo"></div>
+          <div id="inf-usuario">Menú Principal<br></div>
+        </div>
+        <div id="buscador">
+          <form id="miForm" name="miForm" action="" method="get" onsubmit="return valida(this)">
+            <div class="w87"><input type="text" id="busca">
+              <input type="submit" class="buscar" value=""></div>
+          </form>
+        </div>
+       <div id="menu">
+			  <ul class="l-navegacion nivel1">
+					<li>
+						<a><p>Retiro</p><div class="flecha"></div></a>
+						<ul class="nivel2">
+							<li><a  href="retiro-total.htnl"><p>Total</p></a></li>
+							<li>
+								<a><p>Parcial</p><div class="flecha"></div></a>
+								<ul class="nivel3 fix1">
+									<li><a  href="retiro-parcial-desempleo.html"><p>Desempleo</p></a></li>
+									<li><a  href="retiro-parcial-matrimonio.html"><p>Matrimonio</p></a></li>
+									<li><a  href="retiro-parcial-desempleo.html"><p>Parcialidades</p></a></li>
+									<li><a  href="retiro-parcial-desempleo.html"><p>Recuperación de recursos por retiro parcial</p></a></li>
+								</ul>
+							</li>
+							<li><a  href="retiro-programado.html"><p>Programado</p></a></li>
+							<li><a  href="aportacion-voluntaria.html"><p>Aportación voluntaria</p></a></li>
+						</ul>
+					</li>
+					<li><a href="separacion-cuentas.html"><p>Separación de cuentas</p></a></li>
+					<li>
+						<a><p>Unificación de cuentas</p><div class="flecha"></div></a>
+						<ul class="nivel2">
+							<li><a  href="#"><p>Texto Ejemplo</p></a></li>
+						</ul>
+					</li>
+					<li><a href="modificacion-datos.html"><p>Modificación de datos certificables</p></a></li>
+					<li><a href="seleccion-siefore.html"><p>Selección de Siefore</p></a></li>
+					<li>
+						<a><p>Estados de cuenta y saldos</p><div class="flecha"></div></a>
+						<ul class="nivel2">
+							<li><a  href="#"><p>Texto Ejemplo</p></a></li>
+						</ul>
+					</li>
+					<li>
+						<a><p>Emisión de constancias y certificados</p><div class="flecha"></div></a>
+						<ul class="nivel2">
+							<li><a  href="#"><p>Texto Ejemplo</p></a></li>
+						</ul>
+					</li>
+					<li><a href="recertificacion.html"><p>Recertificación</p></a></li>
+					<li>
+						<a><p>Información y estatus</p><div class="flecha"></div></a>
+						<ul class="nivel2 arriba" >
+							<li><a href="#"><p>Rendimientos</p></a></li>
+							<li><a href="estatus-tramite.html"><p>Estatus de un trámite</p></a></li>
+							<li><a href="#"><p>Conoce tu cliente</p></a></li>
+							<li><a href="#"><p>Expediente de afiliación</p></a></li>
+							<li><a href="#"><p>Reclasificación de aportaciones voluntarias</p></a></li>
+							<li><a href="#"><p>Campañas paperless</p></a></li>
+						</ul>
+					</li>
+					<li>
+						<a><p>Aclaración</p><div class="flecha"></div></a>
+						<ul class="nivel2 fix1">
+							<li><a  href="#"><p>Texto Ejemplo</p></a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+      </div>
+    </div>
+
+    <!-- Contenido -->
+    <div class="contSecc">
+    	<div class="divMenuInfo">
+			<div><img src="img/icoUsuario.svg"> Cliente   GS HackChallenge </div>
+			<div>CURP:<span class="txtV"> CURP000000XXXXXXXX</span></div>
+			<div>NSS:<span class="txtV"> 1234567890</span></div>
+		</div>
+
+
+		<div class="contHome">
+
+			<div class="info">
+			<br>
+			<br>
+			<div class="titSec">Detalle del trámite</div>
+			<table class="tblGeneral">
+			  <tr>
+				<th></th>
+				<th>Trámite</th>
+				<th>Estatus</th>
+				<th>Fecha de último estatus</th>
+				<th>Fecha de inicio</th>
+			  </tr>
+			  <tr>
+				<td><img src="img/icoEstatusRojo.svg"></td>
+				<td><a href="#" class="modalTomaFotografica_view">Modificación de datos en linea</a></td>
+				<td><a href="#">Rechazo definitivo</a></td>
+				<td>12/01/2018</td>
+				<td>11/01/2018</td>
+			  </tr>
+			  <tr>
+				<td><img src="img/icoEstatusVerde.svg"></td>
+				<td><a href="#" class="modalTomaFotografica_view">Modificación de datos en linea</a></td>
+				<td>Concluida satisfactoriamente en operaciones</td>
+				<td>12/01/2018</td>
+				<td>11/01/2018</td>
+			  </tr>
+			  <tr>
+				<td><img src="img/icoEstatusVerde.svg"></td>
+				<td><a href="#" class="modalTomaFotografica_view">Modificación de datos en linea</a></td>
+				<td>Concluida satisfactoriamente en operaciones</td>
+				<td>12/01/2018</td>
+				<td>11/01/2018</td>
+			  </tr>
+			  <tr>
+				<td><img src="img/icoEstatusVerde.svg"></td>
+				<td><a href="#" class="modalTomaFotografica_view">Modificación de datos en linea</a></td>
+				<td>Concluida satisfactoriamente en operaciones</td>
+				<td>12/01/2018</td>
+				<td>11/01/2018</td>
+			  </tr>
+			  <tr>
+				<td><img src="img/icoEstatusVerde.svg"></td>
+				<td><a href="#" class="modalTomaFotografica_view">Modificación de datos en linea</a></td>
+				<td>Concluida satisfactoriamente en operaciones</td>
+				<td>12/01/2018</td>
+				<td>11/01/2018</td>
+			  </tr>
+			  <tr>
+				<td><img src="img/icoEstatusVerde.svg"></td>
+				<td><a href="#" class="modalTomaFotografica_view">Modificación de datos en linea</a></td>
+				<td>Concluida satisfactoriamente en operaciones</td>
+				<td>12/01/2018</td>
+				<td>11/01/2018</td>
+			  </tr>
+
+			</table>
+
+			</div>
+
+		</div>
+	</div>	<!-- Fin conSecc -->
+	
+	<!-- DIV linea Afore Azteca -->
+
+  <div class="lineaAfore">
+    <table class="tblLineaAfore">
+      <tr>
+        <td><img src="img/icoTel.svg" alt=""></td  >
+			<td>
+				<span>Línea Azteca</span> <br>
+				<span>01 800 040 7777</span> <br> <span>55 54 47 88 10</span> <br>
+				<span>Interior de la República y Área Metropolitana</span>
+			  </td>
+      </tr>
+    </table>
+  </div>
+  
+  
+	<!-- Footer -->
+	<div class="footer">
+		<div>Banco Azteca S.A. Institución de Banco Multiple</div>
+		<div>Derechos Reservados 2014 (Términos y Condiciones de uso del portal)</div>
+	</div>
+</div><!-- Fin page -->
+<div class="sobresombra"></div>
+</body>
+</html>
+<!-- MODAL -->
+
+<div id="modalTomaFotografica" class="modal">
+  <div class="cuadroPrueba cuadroM">
+    <a href="#" class="simplemodal-close btnCerrar"><img src="img/icoCerrar.svg"></a>
+    <div class="titModal">Toma fotográfica</div>
+    <div class="contModal">
+      <br>
+      <table class="tblGeneral tblFotografia">
+        <tr>
+          <th></th>
+          <th>Trámite</th>
+          <th>Estatus</th>
+        </tr>
+        <tr>
+          <td><img src="img/tablaFoto1.svg"></td>
+          <td>Inicio de registro de solicitud</td>
+          <td>Aprobado</td>
+        </tr>
+        <tr>
+          <td><img src="img/tablaFoto2.svg"></td>
+          <td>Digitalización</td>
+          <td>Aprobado</td>
+        </tr>
+        <tr>
+          <td><img src="img/tablaFoto3.svg"></td>
+          <td>Envío digital de solicitud a mesa de control</td>
+          <td>Aprobado</td>
+        </tr>
+        <tr>
+          <td><img src="img/tablaFoto4.svg"></td>
+          <td>En autorización de biometricos</td>
+          <td>Aprobado</td>
+        </tr>
+        <tr>
+          <td><img src="img/tablaFoto5.svg"></td>
+          <td>Solicitud en operaciones AAZ</td>
+          <td>Aprobado</td>
+        </tr>
+        <tr>
+          <td><img src="img/tablaFoto6.svg"></td>
+          <td>En validación con la empresa operadora</td>
+          <td>Aprobado</td>
+        </tr>
+        <tr>
+          <td><img src="img/tablaFoto7.svg"></td>
+          <td>Solicitud aprobada</td>
+          <td>Aprobado</td>
+        </tr>
+      </table>
+    </div>
+    <br>
+    <div class="btnCenter">
+      <a href="#" class="btnA simplemodal-close">Aceptar</a>
+    </div>
+  </div>
+</div>
+<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="js/jquery.dropkick.js"></script><!--Select -->
+<script type="text/javascript" src="js/content_height.js"></script>
+<script type="text/javascript" src="js/jquery-ui.js"></script>
+<script src="js/jquery.simplemodal.js"></script>
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/funciones.js"></script>

@@ -1,5 +1,5 @@
-<template name="retiros">
-    <div class="pageHome">
+<template name="historial">
+   <div class="pageHome">
     <div class="header">
       <div class="headerMenu">
         <a href="#" id="hamburger"><img src="/img/btn_hamburguer.svg" alt="Menú principal" class="imgHamburgesa"></a>
@@ -32,37 +32,35 @@
 
     <div class="titulo">
         <div class="ruta">
-            <a href="/">Página Principal</a> /
-            <a href="/">Inicio</a> 
+            <a href="index.html">Página Principal</a> /
+            <a href="index.html">Inicio</a> 
         </div>
         Inicio
     </div>
 
-    
-
     <!-- Contenido -->
-    <div class="contHome">
-        <div class="blanco">
-          <div class="w80">
-        <div class="tCenter">Identifica a tu cliente deslizando su <strong>Tarjeta Azteca,</strong> tecleando su <strong>CURP</strong> o su <strong>NSS</strong></div>
-        <div class="divGrow">
-        <div class=" w60">
-          <div class="divGrow">
-          <div class="col2 w60"><input type="text" id="tarjeta" placeholder="Número de Tarjeta Azteca"></div>
-          <div class="col2 w30"><input type="text" placeholder="CVV"></div>
-          <div class="col2 w60"><input type="text" id="monto" placeholder="Monto a retirar"></div>
+    <div class="contSecc">
+      
+           <div class="contHome">
+              <div class="titSec">operaciones</div>
+          <div class="divMenu1">
+          
+         {{#each tickets}}
+          <a href="#" class="menuH2">{{texto}} </a>
+          {{/each}}
           </div>
         </div>
-        <div class=" w30"><a href="#" class="btnA">Deslizar tarjeta</a> </div>
-        </div>
-        </div>
-          </div>
+    </div>
 
-      <div class="btnCenter">
-        <a href="#" class="btnA btnG">Limpiar</a>
-        <a href="#" class="btnA modalAviso_view js-retirar" >Siguiente</a>
+
+     <div class="btnCenter"> 
+        <a href="/admin" class="btnA btnG">Cancelar</a>
+        <a href="#" class="btn js-comercial btnGuardar modalEjemplo_view"><div></div>Enviar</a>
       </div>
-    </div> <!-- Fin conSecc -->
+      <div class="btnCenter"> 
+       <p></p>
+       <p></p>
+      </div><!-- Fin conSecc -->
     
     <!-- Footer -->
     <div class="footer">

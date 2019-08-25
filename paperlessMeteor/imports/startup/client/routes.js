@@ -8,6 +8,7 @@ import '../../ui/layouts/nuevo/nuevo.js';
 import '../../ui/layouts/contratos/contratos.js';
 import '../../ui/layouts/comercial/comercial.js';
 import '../../ui/layouts/escoger/escoger.js';
+import '../../ui/layouts/historial/historial.js';
 
 Router.route('/', {
     layoutTemplate: 'main',
@@ -86,6 +87,23 @@ Router.route('/admin/contratos', {
 
 Router.route('/admin/comercial', {
     layoutTemplate: 'comercial',
+    //yieldRegions: {
+    //    'cuerpo_inicio': {to:'cuerpo'}        
+    //},
+    waitOn: function () { return []; },
+    data: function () { return {encabezado:'Bienvenido'}; },
+    onRun: function () {this.next();}, onRerun: function () {this.next();},
+    onBeforeAction: function () {  
+        this.next();
+    },
+    onAfterAction: function () {}, onStop: function () {},
+    action: function () { this.render();}
+});
+
+
+
+Router.route('/historial', {
+    layoutTemplate: 'historial',
     //yieldRegions: {
     //    'cuerpo_inicio': {to:'cuerpo'}        
     //},

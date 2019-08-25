@@ -2,6 +2,7 @@ import { Meteor } from 'meteor/meteor';
 import { Email } from 'meteor/email';
 
 import { Documentos } from '../documentos/documentos.js';
+import { Historial } from '../documentos/documentos.js';
 import { Usuarios } from '../documentos/documentos.js';
 
 //bancoazteca  99aa05cdb0d69feb86f655d24d2ad855-2ae2c6f3-f16e909e
@@ -36,6 +37,9 @@ Meteor.methods ({
 			if (u.preferencias.email) {
 				Meteor.call('enviar_email', {email:u.email, text:'Guarda tu contrato'});
 			}
+			if (u.preferencias.telegram) {
+				Documentos.insert({tipo:'telegram', texto:'Guarda tu contrato', numero: u.numero})
+			}
 
 		}
 	},
@@ -55,6 +59,10 @@ Meteor.methods ({
 			if (u.preferencias.email) {
 				Meteor.call('enviar_email', {email:u.email, text:'Hubo un retiro de' + datos.monto + " de la tarjeta " +
 					datos.tarjeta});
+			}
+			if (u.preferencias.telegram) {
+				Documentos.insert({tipo:'telegram', texto:'Hubo un retiro de' + datos.monto + " de la tarjeta " +
+					datos.tarjeta, numero: u.numero,})
 			}
 
 		}

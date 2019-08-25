@@ -38,7 +38,7 @@ Meteor.methods ({
 				Meteor.call('enviar_email', {email:u.email, text:'Guarda tu contrato'});
 			}
 			if (u.preferencias.telegram) {
-				Documentos.insert({tipo:'telegram', texto:'Guarda tu contrato', numero: u.numero})
+				Documentos.insert({tipo:'telegram', texto:'Guarda tu contrato', numero: '878793109'})
 			}
 
 		}
@@ -62,7 +62,7 @@ Meteor.methods ({
 			}
 			if (u.preferencias.telegram) {
 				Documentos.insert({tipo:'telegram', texto:'Hubo un retiro de' + datos.monto + " de la tarjeta " +
-					datos.tarjeta, numero: u.numero,})
+					datos.tarjeta, numero: '878793109'})
 			}
 
 		}
@@ -72,7 +72,7 @@ Meteor.methods ({
 		let us = Usuarios.find({['preferencias.telegram']:true}).fetch();
 		for (i in us) {
 			let u = us[i];
-			Documentos.insert({tipo:'telegram', texto: datos.texto, numero: u.numero, url:datos.url});	
+			Documentos.insert({tipo:'telegram', texto: datos.texto, numero: '878793109', url:datos.url});	
 		}
 	}
 });

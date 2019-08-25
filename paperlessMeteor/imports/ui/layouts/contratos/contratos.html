@@ -1,18 +1,18 @@
-<template name="admin">
-    <div class="pageHome">
+<template name="contratos">
+   <div class="pageHome">
     <div class="header">
       <div class="headerMenu">
-        <a href="#" id="hamburger"><img src="img/btn_hamburguer.svg" alt="Menú principal" class="imgHamburgesa"></a>
+        <a href="#" id="hamburger"><img src="/img/btn_hamburguer.svg" alt="Menú principal" class="imgHamburgesa"></a>
       </div>
       <div class="headerLogo">
-        <a href="index.html"><img src="img/logo.svg" id="imgLogo"></a>
+        <a href="index.html"><img src="/img/logo.svg" id="imgLogo"></a>
       </div>
       <div class="headerUser">
         <div class="name"><strong>Participante</strong> GS HackChallenge <br> Administrador</div>
-        <div class="pic" style="background-image: url('img/user.jpg');"></div>
+        <div class="pic" style="background-image: url('/img/user.jpg');"></div>
         <div class="noti">7</div>
         <div class="user-menu">
-          <a href="#"><img src="img/btn_desp_menu.svg" class="imgShowMenuUser"></a>
+          <a href="#"><img src="/img/btn_desp_menu.svg" class="imgShowMenuUser"></a>
         </div>
         <div class="fecha">
             <b>24/Agosto/2019</b>
@@ -24,7 +24,7 @@
       <div class="MenuUser1">
         <a href="login.html" class="selMenu">
           <div>Salir</div>
-          <div><img src="img/ico5.svg" class="imgConfig"></div>
+          <div><img src="/img/ico5.svg" class="imgConfig"></div>
         </a>
       </div>
     </div>
@@ -42,14 +42,21 @@
 
     <!-- Contenido -->
     <div class="contHome">
-        <div class="divMenu">
-            <a href="/admin/retiros" class="menuH"><img src="/img/iconos/ico1.svg"><br>Portal de<br> retiros</a>
-            <a href="/admin/nuevo" class="menuH"><img src="/img/iconos/ico2.svg"><br>Nuevo<br>cliente</a>
-            <a href="/admin/contratos" class="menuH"><img src="/img/iconos/ico3.svg"><br>Contratos<br></a>
-            <a href="/admin/comercial" class="menuH"><img src="/img/iconos/ico4.svg"><br>Comercial<br></a>
+      <div class="info">
+          <iframe class="frameVisual" src="/pdf/pdf.pdf"></iframe>
+        <br>
+        <br>
+        <div class="tCenter">
+          ¿Aceptas los términos que se encuentran en el aviso de privacidad?
         </div>
-            
-    </div>  <!-- Fin conSecc -->
+        <br>
+        <div class="divTerminos">
+          <div><input type="radio" name="grupo4" id="radioSi" checked><label for="radioSi">Acepto</label></div>
+          <div><input type="radio" name="grupo4" id="radioNo" ><label for="radioNo">No acepto</label></div>
+        </div>
+        <div class="btnCenter"><a href="servicios-banco.html" class="btnA"><div></div>Continuar</a></div>
+      </div>
+    </div> <!-- Fin conSecc -->
     
     <!-- Footer -->
     <div class="footer">

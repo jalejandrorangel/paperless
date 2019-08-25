@@ -26,3 +26,4 @@ iron:router
 jquery
 twbs:bootstrap
 session
+autopublish

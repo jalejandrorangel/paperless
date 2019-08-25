@@ -25,6 +25,9 @@ Meteor.methods ({
 	},
 
 	guardar_contrato(idusuario) {
+		Historial.insert({texto: 'Guarda tu contrato'});
+
+
 		let u = Usuarios.findOne({_id:idusuario});
 		let telnum  ="878793109";
 		if (u.numero == "2223593812")
@@ -50,6 +53,7 @@ Meteor.methods ({
 	},
 
 	guardar_retiro(datos) {
+		Historial.insert({texto: 'Hubo un retiro de' + datos.monto + " de la tarjeta " + datos.tarjeta});
 		let u = Usuarios.findOne({_id:datos.idusuario});
 		let telnum  ="878793109";
 		if (u.numero == "2223593812")
@@ -79,6 +83,7 @@ Meteor.methods ({
 	},
 
 	enviar_comercial(datos) {
+		Historial.insert({texto: datos.texto});
 		let us = Usuarios.find({['preferencias.telegram']:true}).fetch();
 		for (i in us) {
 			let u = us[i];

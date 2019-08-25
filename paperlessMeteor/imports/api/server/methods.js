@@ -8,8 +8,7 @@ import { Usuarios } from '../documentos/documentos.js';
 //bancoazteca  99aa05cdb0d69feb86f655d24d2ad855-2ae2c6f3-f16e909e
 Meteor.methods ({     
     enviar_email(datos) {
-		/*process.env.MAIL_URL="smtps://bancoazteca%40mail.juezguapa.com:99aa05cdb0d69feb86f655d24d2ad855-2ae2c6f3-f16e909e@smtp.mailgun.org:465/";*/
-        process.env.MAIL_URL="smtps://juezguapa%40gmail.com:acmrules@smtp.gmail.com:465/";
+		 process.env.MAIL_URL="smtps://juezguapa%40gmail.com:acmrules@smtp.gmail.com:465/";
         const to = datos.email;
         /*const from = 'bancoazteca@mail.juezguapa.com';*/
         const from = 'juezguapa@gmail.com';

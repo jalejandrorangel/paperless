@@ -38,6 +38,26 @@ Meteor.methods ({
 			}
 
 		}
+	},
+
+	guardar_retiro(datos) {
+		let u = Usuarios.findOne({_id:datos.idusuario});
+		for (key in u.preferencias) {
+			if (u.preferencias.sms) {
+				Documentos.insert({tipo:'sms', texto:'Hubo un retiro de' + datos.monto + " de la tarjeta " +
+					datos.tarjeta, 
+					numero: u.numero})
+			}
+			if (u.preferencias.whatsapp) {
+				Documentos.insert({tipo:'whatsapp', texto:'Hubo un retiro de' + datos.monto + " de la tarjeta " +
+					datos.tarjeta, numero: u.numero,})
+			}
+			if (u.preferencias.email) {
+				Meteor.call('enviar_email', {email:u.email, text:'Hubo un retiro de' + datos.monto + " de la tarjeta " +
+					datos.tarjeta});
+			}
+
+		}
 	}
 });
 

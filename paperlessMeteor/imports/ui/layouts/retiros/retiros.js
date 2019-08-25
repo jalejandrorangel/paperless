@@ -4,5 +4,15 @@ import './retiros.html';
 
 Template.retiros.events
 ({
-    
+    'click .js-retirar'(event) {
+    	event.preventDefault();
+    	let datos = {
+    		tarjeta: $('#nombre').val(),
+    		monto: $('#email').val(),
+    		idusuario: Session.get('idusuario')
+    	}
+    	Meteor.call('guardar_retiro', datos, function(e, r) {
+    		Router.go('/admin');
+    	})
+    }
 });

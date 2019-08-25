@@ -12,6 +12,7 @@ chat_id = bot.get_updates()[-1].message.chat_id
 #chat_id = "MarcusDaOz"
 #chat_id=878793109
 chat_id = int(input())
-cad = 
-#bot.send_message(chat_id=chat_id, text="Te espero bebe")
-bot.send_photo(chat_id=chat_id, photo=open('logo.png','rb'))
+cad = input()
+cosas = input()
+bot.send_message(chat_id=chat_id, text=cad)
+#bot.send_photo(chat_id=chat_id, photo=open('logo.png','rb'))

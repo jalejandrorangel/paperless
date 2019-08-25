@@ -1,6 +1,0 @@
-MongoDB shell version v4.0.6
-connecting to: mongodb://127.0.0.1:3001/meteor?gssapiServiceName=mongodb
-Implicit session: session { "id" : UUID("58165ba3-da50-482d-ae3b-08936189e05a") }
-MongoDB server version: 4.0.6
-WriteResult({ "nRemoved" : 1 })
-bye

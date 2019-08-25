@@ -1,0 +1,171 @@
+<template name="nuevo">
+   <div class="pageHome">
+    <div class="header">
+      <div class="headerMenu">
+        <a href="#" id="hamburger"><img src="/img/btn_hamburguer.svg" alt="Menú principal" class="imgHamburgesa"></a>
+      </div>
+      <div class="headerLogo">
+        <a href="index.html"><img src="/img/logo.svg" id="imgLogo"></a>
+      </div>
+      <div class="headerUser">
+        <div class="name"><strong>Participante</strong> GS HackChallenge <br> Administrador</div>
+        <div class="pic" style="background-image: url('/img/user.jpg');"></div>
+        <div class="noti">7</div>
+        <div class="user-menu">
+          <a href="#"><img src="/img/btn_desp_menu.svg" class="imgShowMenuUser"></a>
+        </div>
+        <div class="fecha">
+            <b>24/Agosto/2019</b>
+        </div>
+      </div>
+
+    </div>
+    <div class="MenuUser">
+      <div class="MenuUser1">
+        <a href="login.html" class="selMenu">
+          <div>Salir</div>
+          <div><img src="/img/ico5.svg" class="imgConfig"></div>
+        </a>
+      </div>
+    </div>
+    <div class="clear"></div>
+
+    <div class="titulo">
+        <div class="ruta">
+            <a href="index.html">Página Principal</a> /
+            <a href="index.html">Inicio</a> 
+        </div>
+        Inicio
+    </div>
+
+    
+
+    <!-- Contenido -->
+    <!-- Contenido -->
+    <div class="contSecc">
+    <div class="titSec">Formulario</div>
+    <div class="gris">
+      <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - --> 
+      <!--                                                                 -->
+      <!--   H<CK                                                          -->
+      <!--   CH>LLENGE                                                     -->
+      <!--                                                                 -->
+      <!--    Las clases estan pensadas para que puedas usar las tags      --> 
+      <!--    de formularios que siempre has usado sin preocuparte         -->
+      <!--    el nombre de la clase. Ejemplos a continuación:              --> 
+      <!--                                                                 -->
+      <!--                                                                 -->
+      <!--                             Atte:  maquetacion@elektra.com.mx   -->
+      <!--                                                                 -->
+      <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - --> 
+      <div class="titCol">Por favor complete los siguientes campos</div>
+      <div class="divCol3">
+        <div class="col3">
+          Select:<br>
+          <select>
+              <option value="">Opción 1</option>
+              <option value="">Opción 2</option>
+              <option value="">Opción 3</option>
+          </select>  
+        </div>
+        <div class="col3">
+          <span class="obliga">*</span> Input:<br>
+          <input type="text" placeholder="Nombres">
+        </div>
+        <div class="col3">
+          Correo:<br>
+          <input type="text" placeholder="crramirez@elektra.com">
+        </div>
+        <div class="col3">
+          Teléfono:<br>
+          <div class="divTel">
+            <input type="text" placeholder="55">
+            <input type="text" placeholder="1234 5678">
+          </div>
+        </div>
+        <div class="col3">
+          Password:<br>
+          <input type="password" placeholder="****">
+        </div>
+        <div class="col3">
+          <span class="obliga">*</span>  Radio<br>
+          <div class="divCol2Input">
+            <div><input type="radio" name="grupo1" id="radio1"/><label for="radio1">Opción 1</label></div>
+            <div><input type="radio" name="grupo1" id="radio2"/><label for="radio2">Opción 2</label></div> 
+          </div>
+        </div>
+        <div class="col3">
+          <span class="obliga">*</span> Checkbox:<br>
+          <div class="divCol2Input">
+            <div><input type="checkbox" name="grupo1" id="check1"/><label for="check1">Texto prueba 1</label></div>
+            <div><input type="checkbox" name="grupo1" id="check2"/><label for="check2">Texto prueba 2</label></div>
+            <div><input type="checkbox" name="grupo1" id="check3"/><label for="check3">Texto prueba 3</label></div>
+            <div><input type="checkbox" name="grupo1" id="check4"/><label for="check4">Texto prueba 4</label></div>
+          </div>
+        </div>
+        <div class="col3">
+          Fecha:<br>
+          <input type="text" placeholder="DD/MM/AAAA" class="datapicker1 date" id="datepicker" autocomplete="off"> 
+        </div>
+        <div class="col3">
+          Buscar:<br>
+          <form id="" name="" action="" method="get" onsubmit="return valida(this)">
+            <div class="pRelative">
+                <input type="text" id="busca">
+                <input type="submit" class="buscar" value="">
+            </div>
+          </form>
+        </div>
+        <div class="col3">
+          Textarea:<br>
+          <textarea></textarea>
+        </div>
+        
+        <div class="col3">
+          Upload:<br>
+          <input type="file" id="carga01" class="inputfile carga "/>
+          <label for="carga01" class="btnAgregaFoto "><span>Adjuntar documento </span></label>
+        </div>
+        <div class="col3">
+          Switch:<br>
+          <div class="divSwitch">
+            <input type="checkbox" /> 
+            <div class="switch"></div> Texto ejemplo
+          </div>
+        </div>  
+        <div class="col3">
+          Editar:<br>
+          <form id="" name="" action="" method="get">
+            <div class="pRelative">
+                <input type="text" id="busca">
+                <input type="submit" class="editar" value="">
+            </div>
+          </form>
+        </div>
+        <div class="col3">
+          Hora:<br>
+          <input type="time" name="usr_time">
+        </div>
+        <div class="col3">
+          Número:<br>
+          <input type="number" placeholder="1234">
+        </div>                  
+      </div>
+      <div class="btnCenter"> 
+        <a href="#" class="btnA btnB">Otro</a>
+        <a href="#" class="btnA btnG">Calcelar</a>
+        <a href="#" class="btn btnGuardar modalEjemplo_view"><div></div>Guardar</a>
+      </div>
+    </div>
+    
+    
+  </div><!-- Fin conSecc -->
+    
+    <!-- Footer -->
+    <div class="footer">
+        <div>Banco Azteca S.A. Institución de Banco Multiple</div>
+        <div>Derechos Reservados 2014 (Términos y Condiciones de uso del portal)</div>
+    </div>
+</div><!-- Fin page -->
+<div class="sobresombra"></div>
+</template>

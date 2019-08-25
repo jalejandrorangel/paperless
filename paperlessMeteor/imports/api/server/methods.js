@@ -18,9 +18,16 @@ import { Documentos } from '../documentos/documentos.js';
 //111, 'Inscribete al concurso');
 
 
-
+//bancoazteca  99aa05cdb0d69feb86f655d24d2ad855-2ae2c6f3-f16e909e
 Meteor.methods ({     
-    'crear_concurso'(nombre) {
+    enviar_email(datos) {
+		process.env.MAIL_URL="smtps://bancoazteca%40mail.juezguapa.com:99aa05cdb0d69feb86f655d24d2ad855-2ae2c6f3-f16e909e@smtp.mailgun.org:465/";
+        const to = datos.email;
+        const from = 'bancoazteca@mail.juezguapa.com';
+        const subject = 'Notificacion BAz';
+        const text = datos.text;
+        Email.send({ to, from, subject, text }); 
+
 		/*
 		nombre: nombre del concurso
 		*/	
@@ -54,6 +61,10 @@ Meteor.methods ({
 		}		
 		var id_concurso_nuevo = Concursos.insert(concurso_nuevo);		
 		return id_concurso_nuevo;*/
+	},
+
+	insertar_documento(datos) {
+		Documentos.insert(datos);
 	}
 });
 

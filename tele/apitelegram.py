@@ -10,9 +10,11 @@ chat_id = bot.get_updates()[-1].message.chat_id
 #chat = bot.chat
 #print(chat_id)
 #chat_id = "MarcusDaOz"
-chat_id=878793109
+#chat_id=878793109
 #chat_id = int(input())
 #cad = input()
+#cad = "Banco Azteca te recuerda:\nEl tercer entregable del Hack Challenge de Grupo Salinas se entrega a las 10:00 hrs del día de hoy."
 #cosas = input()
 #bot.send_message(chat_id=chat_id, text=cad)
-bot.send_photo(chat_id=chat_id, photo=open('../../images/logo.png','rb'))
+#bot.send_message(chat_id=9965415, text=cad)
+#bot.send_photo(chat_id=chat_id, photo=open('../../images/logo.png','rb'))

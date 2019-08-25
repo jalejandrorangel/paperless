@@ -24,4 +24,6 @@ Para iniciar el servicio de meteor se debe acceder a la carpeta "paperless/paper
 
 Para el servicio de mensajería, se debe acceder a la carpeta "paperless/sacarDB" y ejecutar el script "ciclo.sh" a través del comando "./ciclo.sh", esto mantendrá el control de las peticiones de mensajes en Facebook, Whatsapp, Telegram y SMS, así como el servicio de correo.
 
-``''pip install -r requisitos_python.txt
+```python
+pip install -r requisitos_python.txt
+```

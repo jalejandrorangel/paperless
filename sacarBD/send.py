@@ -17,14 +17,14 @@ if d[a] == "whatsapp\n":
 
 #elif data[2] == "sms":
 
-if d[a] == "sms\n":
+elif d[a] == "sms\n":
     os.rename("datos.txt", "../sms/datos.txt")
     os.chdir("..")
     os.chdir("sms/")
     os.system("python sms.py < datos.txt")
 
 #elif data[2] == "messenger":
-if d[a] == "messenger\n":
+elif d[a] == "messenger\n":
     os.rename("datos.txt", "../messenger/datos.txt")
     os.chdir("..")
     os.chdir("messenger/")

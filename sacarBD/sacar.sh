@@ -24,10 +24,16 @@ cd ../paperlessMeteor
 meteor mongo << EOF > ../sacarBD/basura.txt
 db.documentos.remove({_id:"$el_id"});
 EOF
-
+echo $el_id
 cd ../sacarBD
 
 
 #aqui envio con python
+#echo "start sending"
+#rm archivo.txt
+#touch archivo.txt
 python3 send.py
 rm *.txt
+#exit 11
+#echo "finish"
+touch archivo.txt
